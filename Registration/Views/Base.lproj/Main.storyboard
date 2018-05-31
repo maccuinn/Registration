@@ -13,7 +13,7 @@
         <!--Drivers-->
         <scene sceneID="va1-Pi-Zos">
             <objects>
-                <viewController id="YBU-0F-nRf" sceneMemberID="viewController">
+                <viewController id="YBU-0F-nRf" customClass="DriversViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pQn-yX-ulv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <!--Admin-->
         <scene sceneID="J3W-xa-w1H">
             <objects>
-                <viewController id="iXO-OP-sje" sceneMemberID="viewController">
+                <viewController id="iXO-OP-sje" customClass="AdminViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SwA-hi-aXx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <!--Home-->
         <scene sceneID="5Vw-Eo-gP1">
             <objects>
-                <viewController id="2ED-Mo-ds1" sceneMemberID="viewController">
+                <viewController id="2ED-Mo-ds1" customClass="HomeViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q2n-Uy-Qju">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
