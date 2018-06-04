@@ -10,10 +10,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var appNameLabel: UILabel!
+    
+    let name = "Moscore QM"
+    let appName = "Race Day Registration"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        nameLabel.text = name
+        appNameLabel.text = appName
     }
 
     override func didReceiveMemoryWarning() {
