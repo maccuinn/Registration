@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Drivers View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="va1-Pi-Zos">
             <objects>
-                <viewController id="YBU-0F-nRf" customClass="DriversViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YBU-0F-nRf" customClass="RegisterViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pQn-yX-ulv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1700" y="602"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Driver View Controller-->
         <scene sceneID="fao-b9-52k">
             <objects>
-                <viewController id="aEz-7s-Lpi" sceneMemberID="viewController">
+                <viewController id="aEz-7s-Lpi" customClass="SelectDriverViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHw-ha-503">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="2466" y="601"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration Success View Controller-->
         <scene sceneID="xJt-Br-ULr">
             <objects>
-                <viewController id="tRJ-JG-Vxr" sceneMemberID="viewController">
+                <viewController id="tRJ-JG-Vxr" customClass="RegistrationSuccessViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3d-Ml-nEv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="174" y="1000"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Drivers View Controller-->
         <scene sceneID="6B3-MD-e01">
             <objects>
-                <viewController id="mgr-pR-nh2" sceneMemberID="viewController">
+                <viewController id="mgr-pR-nh2" customClass="ManageDriversViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8YS-x2-pjF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="1896.8" y="-913.49325337331345"/>
         </scene>
-        <!--View Controller-->
+        <!--Drivers Info View Controller-->
         <scene sceneID="c2j-qs-wod">
             <objects>
-                <viewController id="Mx7-QY-DQT" sceneMemberID="viewController">
+                <viewController id="Mx7-QY-DQT" customClass="DriversInfoViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5gb-hH-N09">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,10 +310,10 @@
             </objects>
             <point key="canvasLocation" x="2689" y="-913"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Handler View Controller-->
         <scene sceneID="HuB-4C-Iks">
             <objects>
-                <viewController id="iwF-hD-Te1" sceneMemberID="viewController">
+                <viewController id="iwF-hD-Te1" customClass="SelectHandlerViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GkB-HR-4zT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="3414" y="-913"/>
         </scene>
-        <!--View Controller-->
+        <!--Driver Update Successful View Controller-->
         <scene sceneID="E7k-5Q-67y">
             <objects>
-                <viewController id="rvv-Dy-hfH" sceneMemberID="viewController">
+                <viewController id="rvv-Dy-hfH" customClass="DriverUpdateSuccessfulViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qgF-sh-tlT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="4185" y="-893"/>
         </scene>
-        <!--View Controller-->
+        <!--New Handler View Controller-->
         <scene sceneID="inW-ov-1tw">
             <objects>
-                <viewController id="m9w-rs-wdz" sceneMemberID="viewController">
+                <viewController id="m9w-rs-wdz" customClass="NewHandlerViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wqm-09-4x1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

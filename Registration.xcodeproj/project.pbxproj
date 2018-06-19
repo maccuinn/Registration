@@ -28,6 +28,14 @@
 		11E71CB220D1C14900D9F6FF /* Handler+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA820D1C14900D9F6FF /* Handler+CoreDataProperties.swift */; };
 		11E71CB320D1C14900D9F6FF /* EventClass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA920D1C14900D9F6FF /* EventClass+CoreDataClass.swift */; };
 		11E71CB420D1C14900D9F6FF /* EventClass+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CAA20D1C14900D9F6FF /* EventClass+CoreDataProperties.swift */; };
+		11FA203720D9764A00AFBFFB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA203620D9764A00AFBFFB /* RegisterViewController.swift */; };
+		11FA203920D9770700AFBFFB /* ManageDriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA203820D9770700AFBFFB /* ManageDriversViewController.swift */; };
+		11FA203B20D9776F00AFBFFB /* DriversInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA203A20D9776F00AFBFFB /* DriversInfoViewController.swift */; };
+		11FA203D20D977A900AFBFFB /* SelectHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA203C20D977A900AFBFFB /* SelectHandlerViewController.swift */; };
+		11FA203F20D977DC00AFBFFB /* NewHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA203E20D977DC00AFBFFB /* NewHandlerViewController.swift */; };
+		11FA204120D9781B00AFBFFB /* DriverUpdateSuccessfulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA204020D9781B00AFBFFB /* DriverUpdateSuccessfulViewController.swift */; };
+		11FA204320D9784600AFBFFB /* SelectDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA204220D9784600AFBFFB /* SelectDriverViewController.swift */; };
+		11FA204520D9787000AFBFFB /* RegistrationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA204420D9787000AFBFFB /* RegistrationSuccessViewController.swift */; };
 		5D81C13FEA913787816C62D2 /* Pods_Registration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EBEA2C73A0341B5B28F698 /* Pods_Registration.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,14 @@
 		11E71CA820D1C14900D9F6FF /* Handler+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Handler+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		11E71CA920D1C14900D9F6FF /* EventClass+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventClass+CoreDataClass.swift"; sourceTree = "<group>"; };
 		11E71CAA20D1C14900D9F6FF /* EventClass+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventClass+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		11FA203620D9764A00AFBFFB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		11FA203820D9770700AFBFFB /* ManageDriversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDriversViewController.swift; sourceTree = "<group>"; };
+		11FA203A20D9776F00AFBFFB /* DriversInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversInfoViewController.swift; sourceTree = "<group>"; };
+		11FA203C20D977A900AFBFFB /* SelectHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectHandlerViewController.swift; path = Registration/Controllers/SelectHandlerViewController.swift; sourceTree = SOURCE_ROOT; };
+		11FA203E20D977DC00AFBFFB /* NewHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHandlerViewController.swift; sourceTree = "<group>"; };
+		11FA204020D9781B00AFBFFB /* DriverUpdateSuccessfulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverUpdateSuccessfulViewController.swift; sourceTree = "<group>"; };
+		11FA204220D9784600AFBFFB /* SelectDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDriverViewController.swift; sourceTree = "<group>"; };
+		11FA204420D9787000AFBFFB /* RegistrationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewController.swift; sourceTree = "<group>"; };
 		174FEBE9C802EF54CED9E23C /* Pods-Registration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Registration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Registration/Pods-Registration.debug.xcconfig"; sourceTree = "<group>"; };
 		60949E0555450215DC00C15E /* Pods-Registration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Registration.release.xcconfig"; path = "Pods/Target Support Files/Pods-Registration/Pods-Registration.release.xcconfig"; sourceTree = "<group>"; };
 		D4EBEA2C73A0341B5B28F698 /* Pods_Registration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Registration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,10 +179,18 @@
 		11E7166220C0641900616CD2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11FA203C20D977A900AFBFFB /* SelectHandlerViewController.swift */,
 				11E7163220BF396600616CD2 /* ViewController.swift */,
 				11E7166520C0651300616CD2 /* HomeViewController.swift */,
 				11E7166720C0653B00616CD2 /* DriversViewController.swift */,
 				11E7166920C0656600616CD2 /* AdminViewController.swift */,
+				11FA203620D9764A00AFBFFB /* RegisterViewController.swift */,
+				11FA203820D9770700AFBFFB /* ManageDriversViewController.swift */,
+				11FA203A20D9776F00AFBFFB /* DriversInfoViewController.swift */,
+				11FA203E20D977DC00AFBFFB /* NewHandlerViewController.swift */,
+				11FA204020D9781B00AFBFFB /* DriverUpdateSuccessfulViewController.swift */,
+				11FA204220D9784600AFBFFB /* SelectDriverViewController.swift */,
+				11FA204420D9787000AFBFFB /* RegistrationSuccessViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -368,19 +392,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FA203B20D9776F00AFBFFB /* DriversInfoViewController.swift in Sources */,
 				11E71CAB20D1C14900D9F6FF /* Driver+CoreDataClass.swift in Sources */,
 				11E71CAC20D1C14900D9F6FF /* Driver+CoreDataProperties.swift in Sources */,
 				11E71CAE20D1C14900D9F6FF /* Transponder+CoreDataProperties.swift in Sources */,
+				11FA203F20D977DC00AFBFFB /* NewHandlerViewController.swift in Sources */,
+				11FA204520D9787000AFBFFB /* RegistrationSuccessViewController.swift in Sources */,
 				11E7166A20C0656600616CD2 /* AdminViewController.swift in Sources */,
 				11E71CB020D1C14900D9F6FF /* Car+CoreDataProperties.swift in Sources */,
 				11E71CB120D1C14900D9F6FF /* Handler+CoreDataClass.swift in Sources */,
+				11FA203D20D977A900AFBFFB /* SelectHandlerViewController.swift in Sources */,
 				11E7163920BF396700616CD2 /* Registration.xcdatamodeld in Sources */,
+				11FA203920D9770700AFBFFB /* ManageDriversViewController.swift in Sources */,
 				11E7163320BF396600616CD2 /* ViewController.swift in Sources */,
 				11E71CB320D1C14900D9F6FF /* EventClass+CoreDataClass.swift in Sources */,
+				11FA204120D9781B00AFBFFB /* DriverUpdateSuccessfulViewController.swift in Sources */,
 				11E71CB420D1C14900D9F6FF /* EventClass+CoreDataProperties.swift in Sources */,
 				11E71CAF20D1C14900D9F6FF /* Car+CoreDataClass.swift in Sources */,
+				11FA204320D9784600AFBFFB /* SelectDriverViewController.swift in Sources */,
 				11E7163120BF396600616CD2 /* AppDelegate.swift in Sources */,
 				11E71CB220D1C14900D9F6FF /* Handler+CoreDataProperties.swift in Sources */,
+				11FA203720D9764A00AFBFFB /* RegisterViewController.swift in Sources */,
 				11E71CAD20D1C14900D9F6FF /* Transponder+CoreDataClass.swift in Sources */,
 				11E7166620C0651300616CD2 /* HomeViewController.swift in Sources */,
 				11E7166820C0653B00616CD2 /* DriversViewController.swift in Sources */,
