@@ -100,34 +100,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Event Name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUm-hn-phh">
-                                <rect key="frame" x="77" y="113" width="114" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbW-wL-Dh6">
-                                <rect key="frame" x="77" y="194" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhz-Tn-kND">
-                                <rect key="frame" x="0.0" y="252" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-i2-DbR">
-                                <rect key="frame" x="159" y="505" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Register"/>
-                                <connections>
-                                    <segue destination="tRJ-JG-Vxr" kind="show" id="Jrb-U0-zGl"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuP-U3-7Yf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdF-Md-sVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9au-vz-WeK">
+                                                <rect key="frame" x="27.5" y="20" width="320" height="266.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Event Name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUm-hn-phh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="26.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbW-wL-Dh6">
+                                                        <rect key="frame" x="0.0" y="26.5" width="92" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhz-Tn-kND">
+                                                        <rect key="frame" x="0.0" y="50.5" width="320" height="216"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-i2-DbR">
+                                                <rect key="frame" x="151" y="306.5" width="72" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Register"/>
+                                                <connections>
+                                                    <segue destination="tRJ-JG-Vxr" kind="show" id="Jrb-U0-zGl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="9au-vz-WeK" firstAttribute="centerX" secondItem="JdF-Md-sVU" secondAttribute="centerX" id="2Bl-2v-fN0"/>
+                                            <constraint firstItem="DnB-i2-DbR" firstAttribute="top" secondItem="9au-vz-WeK" secondAttribute="bottom" constant="20" id="4IE-ae-jYU"/>
+                                            <constraint firstItem="9au-vz-WeK" firstAttribute="top" secondItem="JdF-Md-sVU" secondAttribute="top" constant="20" id="adm-oC-UcF"/>
+                                            <constraint firstItem="DnB-i2-DbR" firstAttribute="centerX" secondItem="JdF-Md-sVU" secondAttribute="centerX" id="cwg-gq-Icv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JdF-Md-sVU" firstAttribute="leading" secondItem="CuP-U3-7Yf" secondAttribute="leading" id="IiP-Ri-LXo"/>
+                                    <constraint firstItem="JdF-Md-sVU" firstAttribute="top" secondItem="CuP-U3-7Yf" secondAttribute="top" id="dsG-DA-CVl"/>
+                                    <constraint firstAttribute="bottom" secondItem="JdF-Md-sVU" secondAttribute="bottom" id="gXx-yv-0Vl"/>
+                                    <constraint firstAttribute="trailing" secondItem="JdF-Md-sVU" secondAttribute="trailing" id="vae-fp-1xA"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JdF-Md-sVU" firstAttribute="width" secondItem="WHw-ha-503" secondAttribute="width" id="ATi-rQ-mnM"/>
+                            <constraint firstItem="JdF-Md-sVU" firstAttribute="height" secondItem="WHw-ha-503" secondAttribute="height" id="GAx-Wq-Dmd"/>
+                            <constraint firstItem="MIl-Ex-UrI" firstAttribute="bottom" secondItem="CuP-U3-7Yf" secondAttribute="bottom" id="R9W-Bo-uJG"/>
+                            <constraint firstItem="CuP-U3-7Yf" firstAttribute="leading" secondItem="MIl-Ex-UrI" secondAttribute="leading" id="c9l-oe-Y5t"/>
+                            <constraint firstItem="CuP-U3-7Yf" firstAttribute="trailing" secondItem="MIl-Ex-UrI" secondAttribute="trailing" id="j0n-za-8jp"/>
+                            <constraint firstItem="CuP-U3-7Yf" firstAttribute="top" secondItem="MIl-Ex-UrI" secondAttribute="top" id="xNm-Yz-YNT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MIl-Ex-UrI"/>
                     </view>
                 </viewController>
@@ -143,19 +176,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank You For Your Regsitration!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-WN-DOk">
-                                <rect key="frame" x="62" y="167" width="250" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You For Your Regsitration!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-WN-DOk">
+                                <rect key="frame" x="20" y="84" width="250" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40n-5d-wsc">
-                                <rect key="frame" x="67" y="261" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40n-5d-wsc">
+                                <rect key="frame" x="62" y="124.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="bK9-Wx-C1R"/>
+                                    <constraint firstAttribute="width" constant="250" id="iKA-Ks-aVn"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jba-WN-DOk" firstAttribute="top" secondItem="a4h-YI-q9m" secondAttribute="top" constant="20" id="JMl-4s-HnY"/>
+                            <constraint firstItem="40n-5d-wsc" firstAttribute="top" secondItem="jba-WN-DOk" secondAttribute="bottom" constant="20" id="Vcr-c0-tAY"/>
+                            <constraint firstItem="40n-5d-wsc" firstAttribute="centerX" secondItem="X3d-Ml-nEv" secondAttribute="centerX" id="sV5-in-sUb"/>
+                            <constraint firstItem="jba-WN-DOk" firstAttribute="leading" secondItem="a4h-YI-q9m" secondAttribute="leading" constant="20" id="yps-e0-3eY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a4h-YI-q9m"/>
                     </view>
                 </viewController>
