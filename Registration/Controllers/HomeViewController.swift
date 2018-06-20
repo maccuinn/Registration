@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var appNameLabel: UILabel!
     
     let name = "Moscore QM"
-    let appName = "Race Day Registration"
+    let appName = "Race Day"
     
     override func viewDidLoad() {
         super.viewDidLoad()
