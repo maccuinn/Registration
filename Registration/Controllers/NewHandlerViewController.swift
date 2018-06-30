@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewHandlerViewController: UIViewController {
     
@@ -17,11 +18,32 @@ class NewHandlerViewController: UIViewController {
     @IBOutlet weak var memberNumberTextField: UITextField!
     
     @IBAction func saveButton(_ sender: UIButton) {
+        createHandler()
     }
     
-    @IBOutlet weak var cancelButton: UIButton!
-    
-    @IBAction func cancelButton(_ sender: UIButton) {
+    func createHandler() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Handler", in: context)
+        let newHandler = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let firstName = firstNameTextField.text
+        let lastName = lastNameTextField.text
+        let phoneNumber = phoneNumberTextField.text
+        let email = emailTextField.text
+        let memberNumber = memberNumberTextField.text
+        
+        newHandler.setValue(firstName, forKey: "firstName")
+        newHandler.setValue(lastName, forKey: "lastName")
+        newHandler.setValue(phoneNumber, forKey: "phoneNumber")
+        newHandler.setValue(email, forKey: "email")
+        newHandler.setValue(memberNumber, forKey: "memberNumber")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed Saving")
+        }
     }
     
     override func viewDidLoad() {

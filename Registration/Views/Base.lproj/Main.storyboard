@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-5u-HKm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-Cd-ucu">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -565,7 +565,7 @@
                     <navigationItem key="navigationItem" id="hS6-nL-FGP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="59C-cJ-xzt">
                             <connections>
-                                <segue destination="m9w-rs-wdz" kind="presentation" id="GHe-Nf-j6s"/>
+                                <segue destination="ej2-Ga-N97" kind="presentation" id="GHe-Nf-j6s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -652,7 +652,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-du-SpN">
-                                                <rect key="frame" x="28" y="48" width="319" height="252.5"/>
+                                                <rect key="frame" x="28" y="28" width="319" height="252.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMH-8X-fzE">
                                                         <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
@@ -724,10 +724,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhn-qn-wyS">
-                                                <rect key="frame" x="20" y="320.5" width="335" height="36"/>
+                                                <rect key="frame" x="20" y="300.5" width="335" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-wV-xzf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="269" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <state key="normal" title="Save">
                                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -735,20 +735,6 @@
                                                         <connections>
                                                             <action selector="saveButton:" destination="m9w-rs-wdz" eventType="touchUpInside" id="XrI-qk-pvc"/>
                                                             <segue destination="iwF-hD-Te1" kind="show" id="Kyv-AC-FX1"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UT-Hq-6sr">
-                                                        <rect key="frame" x="269" y="0.0" width="66" height="36"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="66" id="uqk-ag-OYr"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Cancel">
-                                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="cancelButton:" destination="m9w-rs-wdz" eventType="touchUpInside" id="8Iz-mb-p8i"/>
-                                                            <segue destination="iwF-hD-Te1" kind="show" id="goy-oR-Yrl"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -784,8 +770,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WRM-ER-RUW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wZI-Rg-lJK"/>
                     <connections>
-                        <outlet property="cancelButton" destination="9UT-Hq-6sr" id="uDZ-Sv-zJ7"/>
                         <outlet property="emailTextField" destination="4ca-fU-qom" id="O1v-pZ-C1M"/>
                         <outlet property="firstNameTextField" destination="DZr-by-9H1" id="8YU-SG-I36"/>
                         <outlet property="lastNameTextField" destination="E4Z-tU-BPl" id="AKz-19-b0L"/>
@@ -795,7 +781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fX-Ea-aqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4983" y="-1684"/>
+            <point key="canvasLocation" x="5920.8000000000002" y="-1684.4077961019491"/>
         </scene>
         <!--Home-->
         <scene sceneID="5Vw-Eo-gP1">
@@ -942,11 +928,30 @@
             </objects>
             <point key="canvasLocation" x="3413.5999999999999" y="-913.49325337331345"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="acb-9T-nqR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ej2-Ga-N97" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v2L-SA-Dnd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m9w-rs-wdz" kind="relationship" relationship="rootViewController" id="hVt-1S-WU5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJz-jL-AKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4981.6000000000004" y="-1684.4077961019491"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="GHe-Nf-j6s"/>
         <segue reference="Diu-Hj-wpo"/>
         <segue reference="Kyv-AC-FX1"/>
         <segue reference="Z4q-uG-wMZ"/>
