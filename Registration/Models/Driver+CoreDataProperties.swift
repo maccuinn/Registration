@@ -17,24 +17,15 @@ extension Driver {
         return NSFetchRequest<Driver>(entityName: "Driver")
     }
 
-    @NSManaged public var firstName: String
-    @NSManaged public var lastName: String
-    @NSManaged public var birthDate: NSDate
-    @NSManaged public var memberNumber: String
-    @NSManaged public var phoneNumber: String
+    @NSManaged public var firstName: String?
+    @NSManaged public var lastName: String?
+    @NSManaged public var memberNumber: String?
+    @NSManaged public var phoneNumber: String?
     @NSManaged public var email: String?
     @NSManaged public var handler: Handler?
-    @NSManaged public var cars: NSSet?
+  
 
 }
 
 // MARK: Generated accessors for cars
-extension Driver {
 
-    @objc(addCars:)
-    @NSManaged public func addToCars(_ values: NSSet)
-
-    @objc(removeCars:)
-    @NSManaged public func removeFromCars(_ values: NSSet)
-
-}

@@ -18,14 +18,34 @@ class DriversInfoViewController: UIViewController {
     @IBOutlet weak var memberNumberTextField: UITextField!
     
     @IBAction func nextButton(_ sender: UIButton) {
-        createDriver()
+        if memberNumber == ""
+        {
+            createDriver()
+        } else {
+            editDriver()
+        }
+        
     }
+    
+    var memberNumber:String = ""
+    
+    var driver:NSManagedObject = NSManagedObject()
     
     func createDriver() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Driver", in: context)
         let newDriver = NSManagedObject(entity: entity!, insertInto: context)
+        updateDriver(driver:newDriver)
+    }
+    
+    func editDriver() {
+         updateDriver(driver:driver)
+    }
+    
+    func updateDriver(driver:NSManagedObject) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
         
         let firstName = firstNameTextField.text
         let lastName = lastNameTextField.text
@@ -33,25 +53,24 @@ class DriversInfoViewController: UIViewController {
         let email = emailTextField.text
         let memberNumber = memberNumberTextField.text
         
-        newDriver.setValue(firstName, forKey: "firstName")
-        newDriver.setValue(lastName, forKey: "lastName")
-        newDriver.setValue(phoneNumber, forKey: "phoneNumber")
-        newDriver.setValue(email, forKey: "email")
-        newDriver.setValue(memberNumber, forKey: "memberNumber")
+        driver.setValue(firstName, forKey: "firstName")
+        driver.setValue(lastName, forKey: "lastName")
+        driver.setValue(phoneNumber, forKey: "phoneNumber")
+        driver.setValue(email, forKey: "email")
+        driver.setValue(memberNumber, forKey: "memberNumber")
         
         do {
             try context.save()
         } catch {
             print("Failed to Save")
         }
-       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
             
             // create a reference to the view controller to display to
-            let vc = segue.destination as! SelectHandlerViewController
+            let vc = (segue.destination as! UINavigationController).topViewController as! SelectHandlerViewController
             
             // set the property productData from DetailViewController
             vc.memberNumber = memberNumberTextField.text!
@@ -61,7 +80,26 @@ class DriversInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Driver")
+        request.predicate = NSPredicate(format: "memberNumber = %@", memberNumber)
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            driver = result[0] as! NSManagedObject
+        } catch {
+            print("Failed to set Handler for Driver")
+        }
+        
+        if memberNumber != "" {
+            firstNameTextField.text = driver.value(forKey: "firstName") as? String
+            lastNameTextField.text = driver.value(forKey: "lastName") as? String
+            phoneNumberTextField.text = driver.value(forKey: "phoneNumber") as? String
+            emailTextField.text = driver.value(forKey: "email") as? String
+            memberNumberTextField.text = driver.value(forKey: "memberNumber") as? String
+        }
     }
 
     override func didReceiveMemoryWarning() {

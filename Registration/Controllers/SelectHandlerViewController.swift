@@ -77,6 +77,17 @@ class SelectHandlerViewController: UIViewController, UIPickerViewDataSource, UIP
         }
         createRowTitles()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createHandler" {
+            
+            // create a reference to the view controller to display to
+            let vc = (segue.destination as! UINavigationController).topViewController as! NewHandlerViewController
+            
+            // set the property productData from DetailViewController
+            vc.memberNumber = memberNumber
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

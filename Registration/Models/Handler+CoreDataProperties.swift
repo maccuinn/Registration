@@ -17,11 +17,10 @@ extension Handler {
         return NSFetchRequest<Handler>(entityName: "Handler")
     }
 
-    @NSManaged public var firstName: String
-    @NSManaged public var lastName: String
-    @NSManaged public var birthDate: NSDate
-    @NSManaged public var memberNumber: String
-    @NSManaged public var phoneNumber: String
+    @NSManaged public var firstName: String?
+    @NSManaged public var lastName: String?
+    @NSManaged public var memberNumber: String?
+    @NSManaged public var phoneNumber: String?
     @NSManaged public var email: String?
 
 }

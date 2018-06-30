@@ -21,6 +21,8 @@ class NewHandlerViewController: UIViewController {
         createHandler()
     }
     
+    var memberNumber:String = ""
+    
     func createHandler() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -50,6 +52,17 @@ class NewHandlerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectHandler" {
+            
+            // create a reference to the view controller to display to
+            let vc = (segue.destination as! UINavigationController).topViewController as! SelectHandlerViewController
+            
+            // set the property productData from DetailViewController
+            vc.memberNumber = memberNumber
+        }
     }
 
     override func didReceiveMemoryWarning() {

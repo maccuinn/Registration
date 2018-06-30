@@ -17,6 +17,6 @@ extension EventClass {
         return NSFetchRequest<EventClass>(entityName: "EventClass")
     }
 
-    @NSManaged public var name: String
+    @NSManaged public var name: String?
 
 }
