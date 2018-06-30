@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class ManageDriversViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var selectDriverPicker: UIPickerView!
+    @IBOutlet weak var editButton: UIButton!
+    
+    
+    @IBAction func editDriverButton(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

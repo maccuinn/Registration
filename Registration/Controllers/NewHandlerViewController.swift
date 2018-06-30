@@ -9,7 +9,21 @@
 import UIKit
 
 class NewHandlerViewController: UIViewController {
-
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var memberNumberTextField: UITextField!
+    
+    @IBAction func saveButton(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    @IBAction func cancelButton(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

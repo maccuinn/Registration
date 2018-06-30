@@ -31,12 +31,6 @@ extension Driver {
 // MARK: Generated accessors for cars
 extension Driver {
 
-    @objc(addCarsObject:)
-    @NSManaged public func addToCars(_ value: Car)
-
-    @objc(removeCarsObject:)
-    @NSManaged public func removeFromCars(_ value: Car)
-
     @objc(addCars:)
     @NSManaged public func addToCars(_ values: NSSet)
 

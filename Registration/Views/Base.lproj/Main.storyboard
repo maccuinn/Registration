@@ -134,6 +134,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Register"/>
                                                 <connections>
+                                                    <action selector="registerButtonAction:" destination="aEz-7s-Lpi" eventType="touchUpInside" id="zaM-r7-Fir"/>
                                                     <segue destination="tRJ-JG-Vxr" kind="show" id="Jrb-U0-zGl"/>
                                                 </connections>
                                             </button>
@@ -166,6 +167,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MIl-Ex-UrI"/>
                     </view>
+                    <connections>
+                        <outlet property="eventNameLabel" destination="nUm-hn-phh" id="Vol-1E-fQh"/>
+                        <outlet property="registerButton" destination="DnB-i2-DbR" id="4cM-aw-Pv6"/>
+                        <outlet property="selectDriverPicker" destination="uhz-Tn-kND" id="aF7-Jm-TGK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAi-Ad-v0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,6 +288,7 @@
                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="editDriverButton:" destination="mgr-pR-nh2" eventType="touchUpInside" id="eiY-TW-y8J"/>
                                                     <segue destination="Mx7-QY-DQT" kind="show" id="Z4q-uG-wMZ"/>
                                                 </connections>
                                             </button>
@@ -332,6 +339,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="jdR-BW-19z" id="NDT-w2-eez"/>
+                        <outlet property="selectDriverPicker" destination="wlM-2a-E01" id="ejm-PM-FKr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlq-fa-V1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -435,6 +446,7 @@
                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="nextButton:" destination="Mx7-QY-DQT" eventType="touchUpInside" id="ted-NS-aFy"/>
                                                     <segue destination="29n-P5-Pls" kind="show" id="FyC-TW-ecX"/>
                                                 </connections>
                                             </button>
@@ -468,6 +480,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="glU-iA-0Cq"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="eVo-Mc-uKX" id="NeH-Je-iRJ"/>
+                        <outlet property="firstNameTextField" destination="1rT-oE-PI2" id="yQS-u9-FJ9"/>
+                        <outlet property="lastNameTextField" destination="34h-Zi-629" id="2dh-Xp-azY"/>
+                        <outlet property="memberNumberTextField" destination="iyH-aq-aQe" id="sYf-5m-wQi"/>
+                        <outlet property="phoneNumberTextField" destination="RTB-j8-bk8" id="ArG-WM-ijQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfr-DO-LtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -500,6 +519,7 @@
                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="saveButton:" destination="iwF-hD-Te1" eventType="touchUpInside" id="bZf-Sv-5fh"/>
                                                     <segue destination="rvv-Dy-hfH" kind="show" id="CZP-zv-BJm"/>
                                                 </connections>
                                             </button>
@@ -550,6 +570,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="selectHandlerPicker" destination="Mxf-6W-Xcw" id="WfY-Wj-4f6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djp-Xg-wdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -710,6 +733,7 @@
                                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="saveButton:" destination="m9w-rs-wdz" eventType="touchUpInside" id="XrI-qk-pvc"/>
                                                             <segue destination="iwF-hD-Te1" kind="show" id="Kyv-AC-FX1"/>
                                                         </connections>
                                                     </button>
@@ -723,6 +747,7 @@
                                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="cancelButton:" destination="m9w-rs-wdz" eventType="touchUpInside" id="8Iz-mb-p8i"/>
                                                             <segue destination="iwF-hD-Te1" kind="show" id="goy-oR-Yrl"/>
                                                         </connections>
                                                     </button>
@@ -759,6 +784,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WRM-ER-RUW"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="9UT-Hq-6sr" id="uDZ-Sv-zJ7"/>
+                        <outlet property="emailTextField" destination="4ca-fU-qom" id="O1v-pZ-C1M"/>
+                        <outlet property="firstNameTextField" destination="DZr-by-9H1" id="8YU-SG-I36"/>
+                        <outlet property="lastNameTextField" destination="E4Z-tU-BPl" id="AKz-19-b0L"/>
+                        <outlet property="memberNumberTextField" destination="L46-CZ-cXZ" id="fTO-VN-heP"/>
+                        <outlet property="phoneNumberTextField" destination="Duc-Ym-jES" id="M2o-ir-CYK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fX-Ea-aqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

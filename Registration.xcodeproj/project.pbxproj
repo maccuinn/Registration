@@ -20,10 +20,6 @@
 		11E7166A20C0656600616CD2 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7166920C0656600616CD2 /* AdminViewController.swift */; };
 		11E71CAB20D1C14900D9F6FF /* Driver+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA120D1C14900D9F6FF /* Driver+CoreDataClass.swift */; };
 		11E71CAC20D1C14900D9F6FF /* Driver+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA220D1C14900D9F6FF /* Driver+CoreDataProperties.swift */; };
-		11E71CAD20D1C14900D9F6FF /* Transponder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA320D1C14900D9F6FF /* Transponder+CoreDataClass.swift */; };
-		11E71CAE20D1C14900D9F6FF /* Transponder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA420D1C14900D9F6FF /* Transponder+CoreDataProperties.swift */; };
-		11E71CAF20D1C14900D9F6FF /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA520D1C14900D9F6FF /* Car+CoreDataClass.swift */; };
-		11E71CB020D1C14900D9F6FF /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA620D1C14900D9F6FF /* Car+CoreDataProperties.swift */; };
 		11E71CB120D1C14900D9F6FF /* Handler+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA720D1C14900D9F6FF /* Handler+CoreDataClass.swift */; };
 		11E71CB220D1C14900D9F6FF /* Handler+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA820D1C14900D9F6FF /* Handler+CoreDataProperties.swift */; };
 		11E71CB320D1C14900D9F6FF /* EventClass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E71CA920D1C14900D9F6FF /* EventClass+CoreDataClass.swift */; };
@@ -76,10 +72,6 @@
 		11E7166920C0656600616CD2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		11E71CA120D1C14900D9F6FF /* Driver+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Driver+CoreDataClass.swift"; sourceTree = "<group>"; };
 		11E71CA220D1C14900D9F6FF /* Driver+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Driver+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		11E71CA320D1C14900D9F6FF /* Transponder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transponder+CoreDataClass.swift"; sourceTree = "<group>"; };
-		11E71CA420D1C14900D9F6FF /* Transponder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transponder+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		11E71CA520D1C14900D9F6FF /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
-		11E71CA620D1C14900D9F6FF /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		11E71CA720D1C14900D9F6FF /* Handler+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Handler+CoreDataClass.swift"; sourceTree = "<group>"; };
 		11E71CA820D1C14900D9F6FF /* Handler+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Handler+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		11E71CA920D1C14900D9F6FF /* EventClass+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventClass+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -209,10 +201,6 @@
 			children = (
 				11E71CA120D1C14900D9F6FF /* Driver+CoreDataClass.swift */,
 				11E71CA220D1C14900D9F6FF /* Driver+CoreDataProperties.swift */,
-				11E71CA320D1C14900D9F6FF /* Transponder+CoreDataClass.swift */,
-				11E71CA420D1C14900D9F6FF /* Transponder+CoreDataProperties.swift */,
-				11E71CA520D1C14900D9F6FF /* Car+CoreDataClass.swift */,
-				11E71CA620D1C14900D9F6FF /* Car+CoreDataProperties.swift */,
 				11E71CA720D1C14900D9F6FF /* Handler+CoreDataClass.swift */,
 				11E71CA820D1C14900D9F6FF /* Handler+CoreDataProperties.swift */,
 				11E71CA920D1C14900D9F6FF /* EventClass+CoreDataClass.swift */,
@@ -395,11 +383,9 @@
 				11FA203B20D9776F00AFBFFB /* DriversInfoViewController.swift in Sources */,
 				11E71CAB20D1C14900D9F6FF /* Driver+CoreDataClass.swift in Sources */,
 				11E71CAC20D1C14900D9F6FF /* Driver+CoreDataProperties.swift in Sources */,
-				11E71CAE20D1C14900D9F6FF /* Transponder+CoreDataProperties.swift in Sources */,
 				11FA203F20D977DC00AFBFFB /* NewHandlerViewController.swift in Sources */,
 				11FA204520D9787000AFBFFB /* RegistrationSuccessViewController.swift in Sources */,
 				11E7166A20C0656600616CD2 /* AdminViewController.swift in Sources */,
-				11E71CB020D1C14900D9F6FF /* Car+CoreDataProperties.swift in Sources */,
 				11E71CB120D1C14900D9F6FF /* Handler+CoreDataClass.swift in Sources */,
 				11FA203D20D977A900AFBFFB /* SelectHandlerViewController.swift in Sources */,
 				11E7163920BF396700616CD2 /* Registration.xcdatamodeld in Sources */,
@@ -408,12 +394,10 @@
 				11E71CB320D1C14900D9F6FF /* EventClass+CoreDataClass.swift in Sources */,
 				11FA204120D9781B00AFBFFB /* DriverUpdateSuccessfulViewController.swift in Sources */,
 				11E71CB420D1C14900D9F6FF /* EventClass+CoreDataProperties.swift in Sources */,
-				11E71CAF20D1C14900D9F6FF /* Car+CoreDataClass.swift in Sources */,
 				11FA204320D9784600AFBFFB /* SelectDriverViewController.swift in Sources */,
 				11E7163120BF396600616CD2 /* AppDelegate.swift in Sources */,
 				11E71CB220D1C14900D9F6FF /* Handler+CoreDataProperties.swift in Sources */,
 				11FA203720D9764A00AFBFFB /* RegisterViewController.swift in Sources */,
-				11E71CAD20D1C14900D9F6FF /* Transponder+CoreDataClass.swift in Sources */,
 				11E7166620C0651300616CD2 /* HomeViewController.swift in Sources */,
 				11E7166820C0653B00616CD2 /* DriversViewController.swift in Sources */,
 			);
