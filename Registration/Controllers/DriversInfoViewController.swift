@@ -47,6 +47,17 @@ class DriversInfoViewController: UIViewController {
        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            
+            // create a reference to the view controller to display to
+            let vc = segue.destination as! SelectHandlerViewController
+            
+            // set the property productData from DetailViewController
+            vc.memberNumber = memberNumberTextField.text!
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

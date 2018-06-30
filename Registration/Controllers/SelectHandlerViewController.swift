@@ -18,6 +18,7 @@ class SelectHandlerViewController: UIViewController, UIPickerViewDataSource, UIP
     
     var pickerData:[Any] = []
     var pickerTitles:[String] = []
+    var memberNumber:String = ""
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -31,9 +32,25 @@ class SelectHandlerViewController: UIViewController, UIPickerViewDataSource, UIP
         return pickerTitles[row]
     }
     
-    //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let handler = pickerData[row]
         
-    //}
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Driver")
+        request.predicate = NSPredicate(format: "memberNumber = %@", memberNumber)
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            let data = result[0] as! NSManagedObject
+            data.setValue(handler, forKey: "handler")
+            
+        } catch {
+            print("Failed to set Handler for Driver")
+        }
+    }
     
     func createRowTitles() {
         for data in pickerData as! [NSManagedObject] {

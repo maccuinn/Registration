@@ -447,7 +447,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="nextButton:" destination="Mx7-QY-DQT" eventType="touchUpInside" id="ted-NS-aFy"/>
-                                                    <segue destination="29n-P5-Pls" kind="show" id="FyC-TW-ecX"/>
+                                                    <segue destination="29n-P5-Pls" kind="show" identifier="detail" id="FyC-TW-ecX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-5u-HKm">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-Cd-ucu">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -587,7 +587,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvd-1n-uvQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCn-22-Oxz">
                                         <rect key="frame" x="137.5" y="40" width="100.5" height="21"/>
@@ -602,7 +602,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBi-gj-YvP">
-                                        <rect key="frame" x="159" y="283.5" width="56" height="36"/>
+                                        <rect key="frame" x="159" y="237" width="56" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Home">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -792,7 +792,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-On-8m5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moscore QM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4T-Tg-Nws">
                                         <rect key="frame" x="114" y="50" width="147" height="29"/>
@@ -951,9 +951,8 @@
         <image name="Logo" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GHe-Nf-j6s"/>
         <segue reference="Diu-Hj-wpo"/>
-        <segue reference="Kyv-AC-FX1"/>
+        <segue reference="BIc-OQ-VWx"/>
         <segue reference="Z4q-uG-wMZ"/>
     </inferredMetricsTieBreakers>
 </document>
