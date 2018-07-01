@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Club" representedClassName="Club" syncable="YES" codeGenerationType="class">
+        <attribute name="clubName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="events" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="club" inverseEntity="Event" syncable="YES"/>
+    </entity>
     <entity name="Driver" representedClassName=".Driver" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,8 +12,9 @@
         <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="handler" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Handler" syncable="YES"/>
     </entity>
-    <entity name="EventClass" representedClassName=".EventClass" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="events" inverseEntity="Club" syncable="YES"/>
     </entity>
     <entity name="Handler" representedClassName=".Handler" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,9 +23,15 @@
         <attribute name="memberNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Registration" representedClassName="Registration" syncable="YES" codeGenerationType="class">
+        <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Driver" positionX="-333" positionY="-72" width="128" height="133"/>
-        <element name="EventClass" positionX="-137" positionY="273" width="128" height="58"/>
-        <element name="Handler" positionX="-135" positionY="117" width="128" height="118"/>
+        <element name="Handler" positionX="-54" positionY="198" width="128" height="118"/>
+        <element name="Registration" positionX="-432" positionY="213" width="128" height="75"/>
+        <element name="Event" positionX="-216" positionY="81" width="128" height="75"/>
+        <element name="Club" positionX="-153" positionY="-102" width="128" height="73"/>
     </elements>
 </model>

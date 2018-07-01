@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SelectDriverViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
    
@@ -14,27 +15,51 @@ class SelectDriverViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var selectDriverPicker: UIPickerView!
-    
     @IBOutlet weak var registerButton: UIButton!
+    
+    var pickerData:[NSManagedObject] = []
+    var pickerTitles:[String] = []
     
     @IBAction func registerButtonAction(_ sender: UIButton) {
     }
-    
-    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return pickerTitles.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerTitles[row]
+    }
+    
+    func createRowTitles() {
+        for data in pickerData {
+            pickerTitles.append(data.value(forKey: "firstName") as! String)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         eventNameLabel.text = (event as! String)
-
-        // Do any additional setup after loading the view.
+        
+        selectDriverPicker.delegate = self
+        selectDriverPicker.dataSource = self
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Driver")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request) as! [NSManagedObject]
+            pickerData = result
+        } catch {
+            print("Failed to load Picker Data from Core Data")
+        }
+        createRowTitles()
     }
 
     override func didReceiveMemoryWarning() {

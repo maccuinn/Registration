@@ -46,9 +46,7 @@ class ManageDriversViewController: UIViewController, UIPickerViewDataSource, UIP
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editDriver" {
-            
             let vc = segue.destination as! DriversInfoViewController
-            
             vc.memberNumber = memberNumber
         }
     }

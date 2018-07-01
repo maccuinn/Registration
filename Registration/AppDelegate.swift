@@ -16,9 +16,71 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-       
+        let context = persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Club")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request) as? [NSManagedObject]
+            if result?.count ?? 0 == 0 {
+                addTestData()
+            }
+        } catch {
+            print("Could not load Test Data")
+        }
         return true
+    }
+    
+    func addTestData() {
+        let context = persistentContainer.viewContext
+        
+        let entity2 = NSEntityDescription.entity(forEntityName: "Club", in: context)
+        let club1 = NSManagedObject(entity: entity2!, insertInto: context)
+        let club2 = NSManagedObject(entity: entity2!, insertInto: context)
+        let club3 = NSManagedObject(entity: entity2!, insertInto: context)
+        let club4 = NSManagedObject(entity: entity2!, insertInto: context)
+        let club5 = NSManagedObject(entity: entity2!, insertInto: context)
+        
+        club1.setValue("Langley", forKey: "clubName")
+        club2.setValue("Portland", forKey: "clubName")
+        club3.setValue("Washington", forKey: "clubName")
+        club4.setValue("Yakima", forKey: "clubName")
+        club5.setValue("Bolder", forKey: "clubName")
+        let clubs = [club1, club2, club3, club4, club5]
+        
+        for club in clubs {
+            let entity = NSEntityDescription.entity(forEntityName: "Event", in: context)
+            let event1 = NSManagedObject(entity: entity!, insertInto: context)
+            let event2 = NSManagedObject(entity: entity!, insertInto: context)
+            let event3 = NSManagedObject(entity: entity!, insertInto: context)
+            let event4 = NSManagedObject(entity: entity!, insertInto: context)
+            let event5 = NSManagedObject(entity: entity!, insertInto: context)
+            
+            event1.setValue("Western Grand", forKey: "eventName")
+            event2.setValue("States Race", forKey: "eventName")
+            event3.setValue("Region Race", forKey: "eventName")
+            event4.setValue("Club Race", forKey: "eventName")
+            event5.setValue("Points Race", forKey: "eventName")
+            let events = [event1, event2, event3, event4, event5]
+            
+            let c = club as! Club
+            c.events = []
+            
+            for event in events {
+            //    //event.setValue(club, forKey: "club")
+                (event as! Event).club = club as? Club
+            }
+
+            
+            //club.mutableSetValue(forKey: "club").addObjects(from: events)
+            
+            
+        }
+        do {
+            try context.save()
+        } catch {
+            print("Could not save test data")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
