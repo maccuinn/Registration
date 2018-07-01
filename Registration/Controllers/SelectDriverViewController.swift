@@ -17,10 +17,21 @@ class SelectDriverViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var selectDriverPicker: UIPickerView!
     @IBOutlet weak var registerButton: UIButton!
     
-    var pickerData:[NSManagedObject] = []
+    var pickerData:[Driver] = []
     var pickerTitles:[String] = []
+    var currentClub:Club = Club()
+    var currentEvent:Event = Event()
+    var currentDriver:Driver = Driver()
     
     @IBAction func registerButtonAction(_ sender: UIButton) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Registration", in: context)
+        let registration = NSManagedObject(entity: entity!, insertInto: context)
+        
+        registration.setValue(currentDriver, forKey: "driver")
+        registration.setValue(currentEvent, forKey: "event")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -35,15 +46,28 @@ class SelectDriverViewController: UIViewController, UIPickerViewDataSource, UIPi
         return pickerTitles[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentDriver = pickerData[row]
+    }
+    
     func createRowTitles() {
         for data in pickerData {
             pickerTitles.append(data.value(forKey: "firstName") as! String)
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "registrationFinal" {
+            let vc = segue.destination as! RegistrationSuccessViewController
+            
+            vc.currentDriver = currentDriver
+            vc.currentEvent = currentEvent
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventNameLabel.text = (event as! String)
+        eventNameLabel.text = currentEvent.eventName
         
         selectDriverPicker.delegate = self
         selectDriverPicker.dataSource = self
@@ -54,7 +78,7 @@ class SelectDriverViewController: UIViewController, UIPickerViewDataSource, UIPi
         request.returnsObjectsAsFaults = false
         
         do {
-            let result = try context.fetch(request) as! [NSManagedObject]
+            let result = try context.fetch(request) as! [Driver]
             pickerData = result
         } catch {
             print("Failed to load Picker Data from Core Data")

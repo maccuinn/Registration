@@ -79,13 +79,15 @@ class SelectHandlerViewController: UIViewController, UIPickerViewDataSource, UIP
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "createHandler" {
-            
-            // create a reference to the view controller to display to
             let vc = (segue.destination as! UINavigationController).topViewController as! NewHandlerViewController
-            
-            // set the property productData from DetailViewController
             vc.memberNumber = memberNumber
+        }
+        
+        if segue.identifier == "driverAddedSuccess" {
+            let vc2 = segue.destination as! DriverUpdateSuccessfulViewController
+            vc2.memberNumber = memberNumber
         }
     }
 

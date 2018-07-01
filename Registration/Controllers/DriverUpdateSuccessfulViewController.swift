@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import CoreData
 
 class DriverUpdateSuccessfulViewController: UIViewController {
+    
+    @IBOutlet weak var driverNameLabel: UILabel!
+    
+    var memberNumber:String = ""
+    var driver:Driver = Driver()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Driver")
+        request.predicate = NSPredicate(format: "memberNumber = %@", memberNumber)
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            if result.count != 0 {
+                driver = result[0] as! Driver
+                driverNameLabel.text = driver.firstName
+            }
+        } catch {
+            print("Failed to set Handler for Driver")
+        }
     }
 
     override func didReceiveMemoryWarning() {

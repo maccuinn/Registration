@@ -9,11 +9,19 @@
 import UIKit
 
 class RegistrationSuccessViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var eventNameLabel: UILabel!
+    
+    var currentEvent:Event = Event()
+    var currentDriver:Driver = Driver()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLable.text = currentDriver.firstName
+        eventNameLabel.text = currentEvent.eventName
     }
 
     override func didReceiveMemoryWarning() {

@@ -88,7 +88,9 @@ class DriversInfoViewController: UIViewController {
         
         do {
             let result = try context.fetch(request)
-            driver = result[0] as! NSManagedObject
+            if result.count != 0 {
+                 driver = result[0] as! NSManagedObject
+            }
         } catch {
             print("Failed to set Handler for Driver")
         }
