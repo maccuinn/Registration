@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register View Controller-->
+        <!--Register-->
         <scene sceneID="va1-Pi-Zos">
             <objects>
                 <viewController id="YBU-0F-nRf" customClass="RegisterViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2P-yQ-fnj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXm-Pp-xpG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -90,7 +90,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aNx-BO-ST7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6zk-vF-kHo"/>
+                    <tabBarItem key="tabBarItem" title="Register" id="KBi-Aw-Nmw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="selectClubPicker" destination="KUc-Qb-fwt" id="Dw9-LR-wha"/>
                         <outlet property="selectEventPicker" destination="cVn-vj-9RZ" id="wmS-9d-gEi"/>
@@ -98,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jq-TU-kFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="602"/>
+            <point key="canvasLocation" x="958" y="572"/>
         </scene>
         <!--Select Driver View Controller-->
         <scene sceneID="fao-b9-52k">
@@ -109,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuP-U3-7Yf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdF-Md-sVU">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAi-Ad-v0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="601"/>
+            <point key="canvasLocation" x="1737" y="572"/>
         </scene>
         <!--Registration Success View Controller-->
         <scene sceneID="xJt-Br-ULr">
@@ -196,10 +197,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-1D-q7z">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JFO-Vk-86t">
-                                        <rect key="frame" x="84.5" y="60" width="207.5" height="75"/>
+                                        <rect key="frame" x="84" y="60" width="207.5" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;firstName&gt; " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOx-UK-pZe">
                                                 <rect key="frame" x="41.5" y="0.0" width="124.5" height="25"/>
@@ -216,7 +217,7 @@
                                                 <color key="shadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;EventName&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q7-S8-A42">
-                                                <rect key="frame" x="36.5" y="50" width="135" height="25"/>
+                                                <rect key="frame" x="36" y="50" width="135" height="25"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -225,22 +226,34 @@
                                         </subviews>
                                     </stackView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="40n-5d-wsc">
-                                        <rect key="frame" x="123" y="213" width="128" height="128"/>
+                                        <rect key="frame" x="123" y="260" width="128" height="128"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You For Your Registration!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-WN-DOk">
-                                        <rect key="frame" x="34.5" y="349" width="306.5" height="25"/>
+                                        <rect key="frame" x="34.5" y="442" width="306.5" height="25"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mk-i9-Gm8">
+                                        <rect key="frame" x="156" y="508" width="62" height="39"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="oCc-pi-cEl" kind="show" id="rga-3N-rSu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="jba-WN-DOk" secondAttribute="bottom" constant="180" id="AGc-5x-72I"/>
                                     <constraint firstItem="JFO-Vk-86t" firstAttribute="top" secondItem="HXv-1D-q7z" secondAttribute="top" constant="60" id="Fdm-bM-138"/>
+                                    <constraint firstItem="6Mk-i9-Gm8" firstAttribute="centerX" secondItem="HXv-1D-q7z" secondAttribute="centerX" id="JmL-cU-mCS"/>
                                     <constraint firstItem="JFO-Vk-86t" firstAttribute="centerX" secondItem="HXv-1D-q7z" secondAttribute="centerX" id="Jzb-r5-3Tz"/>
                                     <constraint firstItem="40n-5d-wsc" firstAttribute="centerY" secondItem="HXv-1D-q7z" secondAttribute="centerY" id="WQc-zi-Qg5"/>
+                                    <constraint firstItem="6Mk-i9-Gm8" firstAttribute="top" secondItem="jba-WN-DOk" secondAttribute="bottom" constant="41" id="jTd-h3-cPq"/>
                                     <constraint firstItem="jba-WN-DOk" firstAttribute="centerX" secondItem="HXv-1D-q7z" secondAttribute="centerX" id="jqv-an-ZNu"/>
                                     <constraint firstItem="40n-5d-wsc" firstAttribute="centerX" secondItem="HXv-1D-q7z" secondAttribute="centerX" id="ykq-rG-jdE"/>
                                 </constraints>
@@ -262,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnK-mw-U0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3413.5999999999999" y="601.34932533733138"/>
+            <point key="canvasLocation" x="2522" y="572"/>
         </scene>
         <!--Admin-->
         <scene sceneID="J3W-xa-w1H">
@@ -401,7 +414,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9G-xT-fPV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="626"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="538"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcE-A3-rIS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -545,7 +558,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-5u-HKm">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-Cd-ucu">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -631,7 +644,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvd-1n-uvQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;DriverName&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCn-22-Oxz">
                                         <rect key="frame" x="112.5" y="40" width="151.5" height="26.5"/>
@@ -914,32 +927,13 @@
                     <connections>
                         <segue destination="2ED-Mo-ds1" kind="relationship" relationship="viewControllers" id="qiS-db-l56"/>
                         <segue destination="rSt-q2-E5Q" kind="relationship" relationship="viewControllers" id="yTI-dQ-Fod"/>
-                        <segue destination="WsW-Cj-dN4" kind="relationship" relationship="viewControllers" id="LiA-Er-gEU"/>
                         <segue destination="iXO-OP-sje" kind="relationship" relationship="viewControllers" id="f38-vx-TGz"/>
+                        <segue destination="YBU-0F-nRf" kind="relationship" relationship="viewControllers" id="ejy-gU-6Gn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEV-Ux-zuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="120"/>
-        </scene>
-        <!--Register-->
-        <scene sceneID="Wf4-ab-iXi">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WsW-Cj-dN4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Register" id="Yvh-RH-y7i"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eRF-km-dJV">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="YBU-0F-nRf" kind="relationship" relationship="rootViewController" id="0wC-Um-0ky"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="abT-ux-37B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="958" y="603"/>
         </scene>
         <!--Manage Drivers-->
         <scene sceneID="Y7A-56-al4">
@@ -1002,6 +996,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FyC-TW-ecX"/>
-        <segue reference="F8r-vl-9jg"/>
+        <segue reference="rga-3N-rSu"/>
+        <segue reference="Z4q-uG-wMZ"/>
     </inferredMetricsTieBreakers>
 </document>
